@@ -1,0 +1,97 @@
+case (out)
+        2'd0, 2'd1: begin
+            case(action_reg)
+                // walk
+                3'd0: begin
+                    {runners, base_next} = base + 1;
+                    score_to_add = count_number_of_1s(runners);
+                end
+                // single hit
+                3'd1: begin
+                    {runners, base_next} = {base,1'b1};
+                    score_to_add = count_number_of_1s(runners);
+                end
+                // double hit
+                3'd2: begin
+                    {score_to_add, base_next} = {base,2'b10};
+                    score_to_add = count_number_of_1s(runners);
+                end
+                // triple hit
+                3'd3: begin
+                    base_next = 3'b100;
+                    score_to_add = count_number_of_1s(base);
+                end
+                // home run
+                3'd4: begin
+                    base_next = 3'b000;
+                    score_to_add = count_number_of_1s(base) + 1;
+                end
+                // bunt
+                3'd5: begin
+                    {runners, base_next} = {base,1'b0};
+                    score_to_add = count_number_of_1s(runners);
+                    out_next = out + 1;
+                end
+                // ground ball
+                3'd6: begin
+                    if (base[0] == 1) begin
+                        out_next = out + 2; // dp
+                    end
+                    else begin
+                        {runners, base_next} = {base,1'b0};
+                        score_to_add = count_number_of_1s(runners);
+                        out_next = out + 1;
+                    end
+                end
+                // fly ball
+                3'd7: begin
+                    out_next = out + 1;
+                    if (base[2] == 1) begin
+                        score_to_add = 1; // sf
+                        base_next = {1'b0,base[1:0]};
+                    end
+                end
+            endcase
+        end
+
+        2'd2: begin
+            case(action_reg)
+                // walk
+                3'd0: begin
+                    {runners, base_next} = base + 1;
+                    score_to_add = count_number_of_1s(runners);
+                end
+                // single hit
+                3'd1: begin
+                    {runners, base_next} = {base,2'b01};
+                    score_to_add = count_number_of_1s(runners);
+                end
+                // double hit
+                3'd2: begin
+                    {score_to_add, base_next} = {base,3'b010};
+                    score_to_add = count_number_of_1s(runners);
+                end
+                // triple hit
+                3'd3: begin
+                    base_next = 3'b100;
+                    score_to_add = count_number_of_1s(base);
+                end
+                // home run
+                3'd4: begin
+                    base_next = 3'b000;
+                    score_to_add = count_number_of_1s(base) + 1;
+                end
+                // bunt
+                3'd5: begin
+                end
+                // ground ball
+                3'd6: begin
+                    out_next = 0;
+                end
+                // fly ball
+                3'd7: begin
+                    out_next = 0;
+                end
+            endcase
+        end
+    endcase

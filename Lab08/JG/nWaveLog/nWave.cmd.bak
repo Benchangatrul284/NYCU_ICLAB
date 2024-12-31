@@ -1,0 +1,205 @@
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvOpenFile -win $_nWave1 \
+           {/RAID2/COURSE/iclab/iclab085/Lab08/EXERCISE/01_RTL/SA_CG.fsdb}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED"
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/cg_en} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 )} 
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/cg_en} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 )} 
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvGetSignalClose -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/I_PATTERN"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/I_SA"
+wvGetSignalClose -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/I_SA"
+wvSetPosition -win $_nWave1 {("G1" 70)}
+wvSetPosition -win $_nWave1 {("G1" 70)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/cg_en} \
+{/TESTBED/I_SA/K_matrix\[0:63\]} \
+{/TESTBED/I_SA/K_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/QKT\[0:63\]} \
+{/TESTBED/I_SA/QKT_next\[0:63\]} \
+{/TESTBED/I_SA/Q_matrix\[0:63\]} \
+{/TESTBED/I_SA/Q_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/T\[3:0\]} \
+{/TESTBED/I_SA/T_comb\[3:0\]} \
+{/TESTBED/I_SA/T_reg\[3:0\]} \
+{/TESTBED/I_SA/V_matrix\[0:63\]} \
+{/TESTBED/I_SA/V_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/add0_a\[63:0\]} \
+{/TESTBED/I_SA/add0_b\[63:0\]} \
+{/TESTBED/I_SA/add0_out\[63:0\]} \
+{/TESTBED/I_SA/add1_a\[63:0\]} \
+{/TESTBED/I_SA/add1_b\[63:0\]} \
+{/TESTBED/I_SA/add1_out\[63:0\]} \
+{/TESTBED/I_SA/add2_a\[63:0\]} \
+{/TESTBED/I_SA/add2_b\[63:0\]} \
+{/TESTBED/I_SA/add2_out\[63:0\]} \
+{/TESTBED/I_SA/add3_a\[63:0\]} \
+{/TESTBED/I_SA/add3_b\[63:0\]} \
+{/TESTBED/I_SA/add3_out\[63:0\]} \
+{/TESTBED/I_SA/add4_a\[63:0\]} \
+{/TESTBED/I_SA/add4_b\[63:0\]} \
+{/TESTBED/I_SA/add4_out\[63:0\]} \
+{/TESTBED/I_SA/add5_a\[63:0\]} \
+{/TESTBED/I_SA/add5_b\[63:0\]} \
+{/TESTBED/I_SA/add5_out\[63:0\]} \
+{/TESTBED/I_SA/add6_a\[63:0\]} \
+{/TESTBED/I_SA/add6_b\[63:0\]} \
+{/TESTBED/I_SA/add6_out\[63:0\]} \
+{/TESTBED/I_SA/add7_a\[63:0\]} \
+{/TESTBED/I_SA/add7_b\[63:0\]} \
+{/TESTBED/I_SA/add7_out\[63:0\]} \
+{/TESTBED/I_SA/add8_a\[63:0\]} \
+{/TESTBED/I_SA/add8_b\[63:0\]} \
+{/TESTBED/I_SA/add8_out\[63:0\]} \
+{/TESTBED/I_SA/add9_a\[63:0\]} \
+{/TESTBED/I_SA/add9_b\[63:0\]} \
+{/TESTBED/I_SA/add9_out\[63:0\]} \
+{/TESTBED/I_SA/add10_a\[63:0\]} \
+{/TESTBED/I_SA/add10_b\[63:0\]} \
+{/TESTBED/I_SA/add10_out\[63:0\]} \
+{/TESTBED/I_SA/add11_a\[63:0\]} \
+{/TESTBED/I_SA/add11_b\[63:0\]} \
+{/TESTBED/I_SA/add11_out\[63:0\]} \
+{/TESTBED/I_SA/add12_a\[63:0\]} \
+{/TESTBED/I_SA/add12_b\[63:0\]} \
+{/TESTBED/I_SA/add12_out\[63:0\]} \
+{/TESTBED/I_SA/add13_a\[63:0\]} \
+{/TESTBED/I_SA/add13_b\[63:0\]} \
+{/TESTBED/I_SA/add13_out\[63:0\]} \
+{/TESTBED/I_SA/add14_a\[63:0\]} \
+{/TESTBED/I_SA/add14_b\[63:0\]} \
+{/TESTBED/I_SA/add14_out\[63:0\]} \
+{/TESTBED/I_wvSetCursor -win $_nWave1 3395209.464348 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3407744.095927 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3431420.622242 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3455097.148558 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3467631.780137 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3482951.885400 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3530304.938032 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3542839.569611 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3606905.464348 -snap {("G1" 8)}
+wvSetCursor -win $_nWave1 3662614.938032 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3725288.095927 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3772641.148558 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3790746.727506 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3815815.990663 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3847848.938032 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3891023.780137 -snap {("G1" 9)}
+wvSetCursor -win $_nWave1 3931413.148558 -snap {("G1" 9)}
+wvSelectSignal -win $_nWave1 {( "G1" 9 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 8 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 6 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 5 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 4 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 3 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 4 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 5 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 6 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 7 )} 
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoom -win $_nWave1 7309631.691649 7918767.665953
+wvExit
+lear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/I_SA/K_matrix\[0:63\]} \
+{/TESTBED/I_SA/K_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/QKT\[0:63\]} \
+{/TESTBED/I_SA/QKT_next\[0:63\]} \
+{/TESTBED/I_SA/Q_matrix\[0:63\]} \
+{/TESTBED/I_SA/Q_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/in_data_matrix\[0:63\]} \
+{/TESTBED/I_SA/in_data_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/w_Q_matrix\[0:63\]} \
+{/TESTBED/I_SA/w_Q_matrix_next\[0:63\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 6 7 8 9 10 )} 
+wvSetPosition -win $_nWave1 {("G1" 10)}
+wvGetSignalClose -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/I_SA"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/I_SA"
+wvSetPosition -win $_nWave1 {("G1" 11)}
+wvSetPosition -win $_nWave1 {("G1" 11)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/I_SA/K_matrix\[0:63\]} \
+{/TESTBED/I_SA/K_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/QKT\[0:63\]} \
+{/TESTBED/I_SA/QKT_next\[0:63\]} \
+{/TESTBED/I_SA/Q_matrix\[0:63\]} \
+{/TESTBED/I_SA/Q_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/in_data_matrix\[0:63\]} \
+{/TESTBED/I_SA/in_data_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/w_Q_matrix\[0:63\]} \
+{/TESTBED/I_SA/w_Q_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/cg_en} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 11 )} 
+wvSetPosition -win $_nWave1 {("G1" 11)}
+wvSetPosition -win $_nWave1 {("G1" 11)}
+wvSetPosition -win $_nWave1 {("G1" 11)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/I_SA/K_matrix\[0:63\]} \
+{/TESTBED/I_SA/K_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/QKT\[0:63\]} \
+{/TESTBED/I_SA/QKT_next\[0:63\]} \
+{/TESTBED/I_SA/Q_matrix\[0:63\]} \
+{/TESTBED/I_SA/Q_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/in_data_matrix\[0:63\]} \
+{/TESTBED/I_SA/in_data_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/w_Q_matrix\[0:63\]} \
+{/TESTBED/I_SA/w_Q_matrix_next\[0:63\]} \
+{/TESTBED/I_SA/cg_en} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 11 )} 
+wvSetPosition -win $_nWave1 {("G1" 11)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 8 )} 
+wvSetCursor -win $_nWave1 133702.736842 -snap {("G2" 0)}
+wvSetCursor -win $_nWave1 43174.842105 -snap {("G1" 11)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvExit
